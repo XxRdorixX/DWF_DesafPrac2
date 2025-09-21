@@ -9,15 +9,15 @@ In our first project, it only managed a library; the system allows CRUD operatio
 
 ## Features
 
-•	Retrieve all books.
-•	Add a new book.
-•	Search for books by title.
-•	Update an existing book.
-•	Delete a book by its ID.
-•	Data validation in DTOs.
-•	Centralized error handling.
-•	Swagger UI interactive documentation.
-•	Data persistence with H2 in-memory database.
+- Retrieve all books.
+-	Add a new book.
+-	Search for books by title.
+-	Update an existing book.
+-	Delete a book by its ID.
+-	Data validation in DTOs.
+-	Centralized error handling.
+-	Swagger UI interactive documentation.
+-	Data persistence with H2 in-memory database.
 
 ---
 
@@ -36,22 +36,15 @@ In our first project, it only managed a library; the system allows CRUD operatio
 
 ## Project Structure
 
-model → Book entity class.
-
-config → Basic configuration for OpenAPI/Swagger.
-
-dto → Data Transfer Objects with validation rules.
-
-exception → Global exception handling.
-
-repository → Interface extending JpaRepository.
-
-service → Business logic (interface + implementation).
-
-controller → REST endpoints.
-
-resources → Configuration files (e.g., application.properties).
-
+- `model` – Book entity class
+- `repository` – Interface extending JpaRepository
+- `service` – Business logic (interface + implementation)
+- `controller` – REST endpoints
+- `resources` – Contains configuration files like `application.properties`
+- `config` - Basic configuration for OpenAPI/Swagger.
+- `dto` - Data Transfer Objects with validation rules.
+- `exception` - Global exception handling.
+  
 ---
 
 ## How to Run the Project
@@ -59,8 +52,10 @@ resources → Configuration files (e.g., application.properties).
 1. Clone the repository
  ```
 git clone https://github.com/your-username/DWF_DesafPrac2.git
-cd DWF_DesafPrac2
    ```
+ ```
+cd DWF_DesafPrac2
+ ```
 3. Open the project
 
 Open with IntelliJ IDEA.
@@ -68,10 +63,8 @@ Open with IntelliJ IDEA.
 3. Requirements
 
 Java 17 (Zulu or any compatible JDK).
-
 ```
 Maven installed.
-
   ```
 4. Build the project
    
@@ -106,7 +99,6 @@ GET http://localhost:8081/api/books
 Create a new book
 POST http://localhost:8081/api/books
 Content-Type: application/json
-
 ```
 {
   "title": "Clean Code",
@@ -124,7 +116,6 @@ GET http://localhost:8081/api/books/search?title=Programmer
 Update a book
 PUT http://localhost:8081/api/books/1
 Content-Type: application/json
-
 ```
 {
   "title": "Clean Coder",
