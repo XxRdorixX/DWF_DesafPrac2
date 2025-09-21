@@ -63,16 +63,16 @@ Open with IntelliJ IDEA.
 3. Requirements
 
 Java 17 (Zulu or any compatible JDK).
-```
-Maven installed.
-  ```
-4. Build the project
-   
-mvn clean install
 
+Maven installed.
+  
+4. Build the project
+  ```
+mvn clean install
+  ```
 6. Run the project
 
-Option A (via IDE): Run BookApiApplication.java.
+Option A (via IDE): Run `BookApiApplication.java`
 Option B (via terminal):
 ```
 mvn spring-boot:run
@@ -98,23 +98,24 @@ GET http://localhost:8081/api/books
 
 Create a new book
 POST http://localhost:8081/api/books
-Content-Type: application/json
+body -> raw -> JSON
+Content-Type: application/jso
 ```
 {
   "title": "Clean Code",
   "author": "Robert C. Martin",
   "publicationYear": 2008
 }
-
 ```
 Get book by ID
 GET http://localhost:8081/api/books/1
 
 Search books by title
-GET http://localhost:8081/api/books/search?title=Programmer
+GET http://localhost:8081/api/books/search?title=
 
 Update a book
 PUT http://localhost:8081/api/books/1
+Body -> raw -> JSON
 Content-Type: application/json
 ```
 {
@@ -122,7 +123,6 @@ Content-Type: application/json
   "author": "Robert C. Martin",
   "publicationYear": 2011
 }
-
 ```
 Delete a book
 DELETE http://localhost:8081/api/books/1
