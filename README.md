@@ -1,4 +1,4 @@
-#Book API - Living Letters
+# Book API - Living Letters
 
 A RESTful web service developed with Spring Boot to manage the books of the fiction publishing house "Letras Vivas."
 This API allows clients to perform basic operations such as listing, adding, searching, and deleting books.
@@ -7,7 +7,7 @@ In our first project, it only managed a library; the system allows CRUD operatio
 
 ---
 
-#Features
+## Features
 
 •	Retrieve all books.
 •	Add a new book.
@@ -21,7 +21,7 @@ In our first project, it only managed a library; the system allows CRUD operatio
 
 ---
 
-#Technologies Used
+## Technologies Used
 
 - Java Zulu 17
 - Spring Boot
@@ -34,7 +34,7 @@ In our first project, it only managed a library; the system allows CRUD operatio
 - Swagger UI
 ---
 
-#Project Structure
+## Project Structure
 
 model → Book entity class.
 
@@ -54,13 +54,14 @@ resources → Configuration files (e.g., application.properties).
 
 ---
 
-#How to Run the Project
+## How to Run the Project
 
 1. Clone the repository
+ ```
 git clone https://github.com/your-username/DWF_DesafPrac2.git
 cd DWF_DesafPrac2
-
-2. Open the project
+   ```
+3. Open the project
 
 Open with IntelliJ IDEA.
 
@@ -68,8 +69,10 @@ Open with IntelliJ IDEA.
 
 Java 17 (Zulu or any compatible JDK).
 
+```
 Maven installed.
 
+  ```
 4. Build the project
    
 mvn clean install
@@ -78,9 +81,9 @@ mvn clean install
 
 Option A (via IDE): Run BookApiApplication.java.
 Option B (via terminal):
-
+```
 mvn spring-boot:run
-
+```
 6. Access the API
 
 Base URL: http://localhost:8081/api/books
@@ -95,7 +98,7 @@ Password: (empty)
 
 ---
 
-#Example Requests (Postman)
+## Example Requests (Postman)
 
 Get all books
 GET http://localhost:8081/api/books
@@ -104,12 +107,14 @@ Create a new book
 POST http://localhost:8081/api/books
 Content-Type: application/json
 
+```
 {
   "title": "Clean Code",
   "author": "Robert C. Martin",
   "publicationYear": 2008
 }
 
+```
 Get book by ID
 GET http://localhost:8081/api/books/1
 
@@ -120,18 +125,20 @@ Update a book
 PUT http://localhost:8081/api/books/1
 Content-Type: application/json
 
+```
 {
   "title": "Clean Coder",
   "author": "Robert C. Martin",
   "publicationYear": 2011
 }
 
+```
 Delete a book
 DELETE http://localhost:8081/api/books/1
 
 ---
 
-#Swagger / OpenAPI Documentation
+## Swagger / OpenAPI Documentation
 
 After running the application, the interactive documentation is available at:
 
