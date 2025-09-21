@@ -51,7 +51,7 @@ In our first project, it only managed a library; the system allows CRUD operatio
 
 1. Clone the repository
  ```
-git clone https://github.com/your-username/DWF_DesafPrac2.git
+git clone https://github.com/XxRdorixX/DWF_DesafPrac2.git
    ```
  ```
 cd DWF_DesafPrac2
