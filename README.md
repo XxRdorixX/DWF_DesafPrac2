@@ -56,7 +56,7 @@ git clone https://github.com/XxRdorixX/DWF_DesafPrac2.git
  ```
 cd DWF_DesafPrac2
  ```
-3. Open the project
+2. Open the project
 
 Open with IntelliJ IDEA.
 
@@ -66,7 +66,11 @@ Java 17 (Zulu or any compatible JDK).
 
 Maven installed.
   
-4. Build the project
+4. write to terminal
+```
+cd bookapi
+ ```
+5. Build the project
   ```
 mvn clean install
   ```
@@ -77,7 +81,7 @@ Option B (via terminal):
 ```
 mvn spring-boot:run
 ```
-6. Access the API
+7. Access the API
 
 Base URL: http://localhost:8081/api/books
 
@@ -127,6 +131,29 @@ Content-Type: application/json
 Delete a book
 DELETE http://localhost:8081/api/books/1
 
+
+## Error handling example
+
+POST http://localhost:8081/api/books
+body -> raw -> JSON
+Content-Type: application/jso
+```
+{
+  "title": "",
+  "author": "",
+  "publicationYear": -100
+}
+```
+should show
+```
+{
+      "status": 400,
+    "error": "Bad Request",
+    "message": "Title must be 1-200 chars; publicationYear must be a positive integer; Author must be 1-100 chars; Field 'author' is required; Field 'title' is required",
+    "field": "title",
+    "timestamp": "2025-09-22T06:51:55.1850315"
+}
+```
 ---
 
 ## Swagger / OpenAPI Documentation
@@ -136,3 +163,8 @@ After running the application, the interactive documentation is available at:
 Swagger UI: http://localhost:8081/swagger-ui/index.html
 
 OpenAPI JSON: http://localhost:8081/v3/api-docs
+
+Compared to Postman in Swagger, we won't have to type the above in each GET, POST, PUT, and DELETE, as the options are already pre-made.
+
+To do this, simply copy the link and it will redirect to Swagger with all the options. For example, in POST /api/books, click Try it out and we'll have our body already created. 
+Just change the Title, Author, and publicationYear and click Execute. The information will be saved and can be seen in the H2 Console.
